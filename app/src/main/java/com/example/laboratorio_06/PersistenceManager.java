@@ -23,4 +23,30 @@ public class PersistenceManager {
         editor.apply();
     }
 
+
+
+    // Parte de guardado de nueva alerta
+    public String getUbicacionAlerta() {
+        return datos.getString("ubicacionAlerta", "");
+    }
+
+    public void setUbicacionAlerta(String ubicacionAlerta) {
+        SharedPreferences.Editor editor = datos.edit();
+        editor.putString("ubicacionAlerta", ubicacionAlerta);
+        editor.apply();
+    }
+
+    public String getEvidenciFoto() {
+        return datos.getString("evidenciaFoto", "");
+    }
+
+    public void setEvidenciFoto(String evidenciaFoto) {
+        SharedPreferences.Editor editor = datos.edit();
+        editor.putString("evidenciaFoto", evidenciaFoto);
+        editor.apply();
+    }
+    // Fin de  Parte de guardado de nueva alerta
+    
+    
+
 }
