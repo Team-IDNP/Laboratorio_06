@@ -46,7 +46,18 @@ public class PersistenceManager {
         editor.apply();
     }
     // Fin de  Parte de guardado de nueva alerta
-    
+
+
+    // Parte de guardado de modo nocturno
+    public Boolean getModoNocturno() {
+        return datos.getBoolean("modoNocturno", false);
+    }
+
+    public void setModoNocturno(boolean modo) {
+        SharedPreferences.Editor editor = datos.edit();
+        editor.putBoolean("modoNocturno", modo);
+        editor.apply();
+    }
     
 
 }
